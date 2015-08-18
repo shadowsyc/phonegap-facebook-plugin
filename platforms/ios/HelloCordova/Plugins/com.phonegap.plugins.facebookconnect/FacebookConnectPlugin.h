@@ -8,8 +8,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
+// #import <FacebookSDK/FacebookSDK.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
 #import <Cordova/CDV.h>
 
-@interface FacebookConnectPlugin : CDVPlugin
+@interface FacebookConnectPlugin : CDVPlugin<FBSDKSharingDelegate>
+
+@property FBSDKLoginManager *login;
+
+
 @end

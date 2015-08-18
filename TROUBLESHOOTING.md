@@ -192,7 +192,9 @@ requestsDialog.build().show();
 	3. Ensure that the following file is added under "Compile Sources":
 		- `FacebookConnectPlugin.m`
 	4. Ensure that the following is added under "Link Binary With Libraris":
-		- `FacebookSDK.framework` 
+    - `FBSDKCoreKit.framework`
+    - `FBSDKLoginKit.framework`
+		- `FBSDKShareKit.framework` 
 		- `libsqlite3.dylib`
 		- `Social.framework`
 		- `Accounts.framework`

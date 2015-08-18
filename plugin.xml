@@ -100,9 +100,34 @@
             </dict>
           </array>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+			<dict>
+  				<key>NSExceptionDomains</key>
+  				<dict>
+    				<key>facebook.com</key>
+    				<dict>
+      					<key>NSIncludesSubdomains</key> <true/>        
+      					<key>NSExceptionRequiresForwardSecrecy</key> <false/>
+    				</dict>
+    				<key>fbcdn.net</key>
+    				<dict>
+      					<key>NSIncludesSubdomains</key> <true/>
+      					<key>NSExceptionRequiresForwardSecrecy</key>  <false/>
+    				</dict>
+    				<key>akamaihd.net</key>
+    				<dict>
+      					<key>NSIncludesSubdomains</key> <true/>
+      					<key>NSExceptionRequiresForwardSecrecy</key> <false/>
+    				</dict>
+  				</dict>
+			</dict>
+		</config-file>
 
         <!-- Facebook framework -->
-        <framework src="platforms/ios/FacebookSDK.framework" custom="true" />
+        <framework src="platforms/ios/FBSDKCoreKit.framework" custom="true" />
+        <framework src="platforms/ios/FBSDKLoginKit.framework" custom="true" />
+        <framework src="platforms/ios/FBSDKShareKit.framework" custom="true" />
 
         <!-- System frameworks -->
         <framework src="libsqlite3.dylib" />
